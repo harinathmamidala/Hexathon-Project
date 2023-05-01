@@ -1,0 +1,173 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+canvas{
+  height: auto;
+}
+
+.content{
+ 
+  margin: 0;
+  margin-left: 300px;
+  /* border-style: solid;
+  border-color: blue; */
+}
+
+/* Style the header */
+.header {
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+  background-color: rgb(167, 245, 219);
+  /* border-style: solid;
+  border-color: rgb(196, 1, 255); */
+}
+
+/* Container for flexboxes */
+.row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  overflow-y: scroll;
+  border-style: solid;
+  border-color: aquamarine;
+  max-height: 400px;
+  min-width: 300px;
+   /* Should be removed. Only for demonstration */
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+.room-properties{
+  /* border-style: solid;
+  border-color: rgb(255, 39, 151); */
+ margin-left: 30px;
+ font-weight: bold;
+
+
+}
+.room-properties h4{
+  font-size: 30px;
+
+}
+
+/* devices div */
+.devices-div{
+  display: flex;
+  /* border-style: solid;
+  border-color: rgb(2, 105, 7); */
+}
+.devices-lists{
+  flex: 2;
+  height: 600px;
+  /* border-style: solid;
+  border-color: rgb(255, 0, 0); */
+  display: block;
+  overflow-x: scroll;
+}
+.deviceContent{
+  box-shadow: 10px 10px 8px rgba(138, 138, 138, 0.445);
+  margin: 16px;
+  background-color: rgb(202, 255, 204);
+  border-radius: 10px;
+  /* border-style: solid; */
+  /* border-color: rgb(68, 0, 255); */
+}
+details{
+  cursor: pointer;
+}
+details[open]>.device-details{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  
+  padding: 15px;
+  /* border-style: solid; */
+  /* border-color: rgb(255, 0, 0); */
+}
+details>.device-details{
+  display: none;
+}
+.device{
+  padding-left: 2%;
+  padding-right: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  /* border-style: solid;
+  border-color: yellowgreen; */
+  border-radius: 10px;
+}
+.deviceStatusDiv{
+  display: flex;
+  align-items: center;
+}
+
+.devices-graphs{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* border-style: solid;
+  border-color: rgb(13, 251, 255); */
+}
+
+.devices-piechart{
+  margin-top: 20px;
+  flex: 1;
+  /* border-style: solid;
+  border-color: rgb(5, 17, 184); */
+}
+.devices-bargraph{
+  margin-top: 20px;
+  flex: 1;
+  /* border-style: solid;
+  border-color:  rgb(5, 17, 184); */
+}
+
+.green-tech-div{
+  display: flex;
+}
+
+.green-tech{
+  flex: 1;
+  /* border-style: solid; */
+  padding: 20px;
+  /* border-color:  rgb(233, 105, 105); */
+}
+.green-tech img{
+  box-shadow: 10px 10px 8px rgba(80, 81, 81, 0.479);
+  border-radius: 17px;
+  width: 100%;
+}
+@media (max-width:1134px) {
+  .content{
+    margin: 0;
+  }
+}
+@media (max-width: 700px) {
+  /* .devices-bargraph,.devices-piechart{
+    height: 400px;
+  } */
+  
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .devices-graphs,.devices-div{
+    display: block;
+  }
+  .content{
+    margin: 0;
+  }
+  .green-tech-div{
+    display: block;
+  }
+}
